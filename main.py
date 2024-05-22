@@ -13,10 +13,13 @@ import keyboard
 
 cont = True
 while(cont):
-    stockSym = input("Please Enter a stock's SYMBOL Ex(APPL): ")
+    stockSym = input("Please Enter a stock's SYMBOL Ex(AAPL): ")
     print(get_current_price(stockSym))
-    if keyboard.is_pressed('q'):
+    keyInput = input("Press Q to Quit or C to Continue: ")
+    if(keyInput == 'q'):
         cont = False
+    elif(keyInput == 'c'):
+        cont = True
 
 
 
